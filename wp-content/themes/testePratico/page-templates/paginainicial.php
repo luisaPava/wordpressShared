@@ -26,13 +26,28 @@ global $post;
 $image_object = get_cfc_field('infopaginainicial', 'imagem-de-fundo', $post->ID );
 ?>
 
+<style>
+	body {
+		background: url(<?php echo $image_object['sizes']['thumbnail']; ?>);
+		background-size: cover;
+		background-position: center;
+	}
+	.main-content {
+		/* Aplica estilo a todos com a classe main-content */
+	}
+	.main-content, .content-area {
+		/* Aplica estilo a todos com a classe main-content ou content-area */
+	}
+	.main-content.content-area {
+		/* Aplica estilo a todos com a classe main-content e content-area */
+	}
+
+</style>
+
 
 <div id="main-content" class="main-content">
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
-			<style>
-				body {background: url(<?php echo $image_object['sizes']['thumbnail']; ?>); background-size: cover; background-position: center;}
-			</style>
 				<div>
 					<form action="demo_form.asp">
   						Nome: <input type="text" name="fname"><br>
