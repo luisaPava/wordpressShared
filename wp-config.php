@@ -20,18 +20,16 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('FS_METHOD','direct');
-
-define('DB_NAME', 'wordpress');
+define('DB_NAME', 'mynewbd');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'luisamabp');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'luisinha');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'db4free.net:3306');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -48,14 +46,14 @@ define('DB_COLLATE', '');
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         'NFn1(#-mfZV^X>;)0wOtF13(m(YJ8Sn$Dq[+Xc[]_7*$n@R=X*%s:L#S4D_&BONk');
-define('SECURE_AUTH_KEY',  'E12lIaC4q>6A+Ez<Ke{+1iRF#%@;|1eP[]z@~;)fHo@8Zpzl`]cvVTcnPe%gjR2c');
-define('LOGGED_IN_KEY',    'qv[?GRkUOL<f$rZjJnrcfN@Gy,#}nHp<S/wmZr0OUu>^OZCvZxALeswp3_b`G(zI');
-define('NONCE_KEY',        'OVo93<Q-:%N=ObvwxM/N=hc<yq>-2|/v<Q; pe21xZV@v7hgH[z@ayN+)k!R6W&P');
-define('AUTH_SALT',        '=|,%eb*)A(;D*8Z0dtSLo4 F$P#[qI&&^X7.QL2,iuiC*85iG y}@|;>KFq<!)Iy');
-define('SECURE_AUTH_SALT', 'g]Zq==A-v5x(D-8}nq*Y*PJ,>XygibzkSz$~X JNIJ}c14^yQ7Ow~H@vG:DHS=wy');
-define('LOGGED_IN_SALT',   'M)J49NqyOr>i($^d*:QIs!<+(|%e~MpYCU:Ko_24&k<-mq0wB$=$*^WUp/(Vbj&E');
-define('NONCE_SALT',       'T |F;06;l?%Nhuem4~Ed>tJo@%0QRy]~Q:X_aL.9]WZ#2riURs^lbgjE*iYal5[@');
+define('AUTH_KEY',         'U;zLibqi?CaJzp`O)E1hVI}`oJ&1R^:2zd#[~X@j5`QJYVgG *bE_pJpq rs#JLa');
+define('SECURE_AUTH_KEY',  'dwkPqmaoANwOn@PliE>(X^{sY*5Rfiz}>`&jxYn,PShQ0KV<4x9X* 6OG!UJhkaW');
+define('LOGGED_IN_KEY',    '+h;Z5Ht>BDW@|H%houH-7&F3D}zE]A&dv$<*z+Qg52q%B)T}S5@>9k:p~,OZv[fg');
+define('NONCE_KEY',        '5x{IHN6Y^#d@oD-OE4T)*uf,ShX<g`.M(!!HG|1bj+Jr3h|-RY)!^37Iqhed@l13');
+define('AUTH_SALT',        'T6M)-/Nlxht6d#MrQ}j*Lb,!<`%^6fHD}h/H.n(]<yi7z>kjT+;8`)@SFc&TBxvq');
+define('SECURE_AUTH_SALT', 'h?08A a)F[~BinhU6uOAMJ#p@7x )>[s#Ah@i`AM0 @C|xQhx.r.RGEk9I(0^~a6');
+define('LOGGED_IN_SALT',   'c].r0SC+;sfq~,^B.>,b?Q}/ p*d,}!PwXC:f/PVbfTsort>seM9IPXQ(t@D0j=|');
+define('NONCE_SALT',       '}P`sgCLJ (mts_}NBg?ua,65#rDQ+1dE{Q~@VnPutx+eR/,z.gz+O.RMu5F=SO>a');
 
 /**#@-*/
 
@@ -89,5 +87,3 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
-?>
