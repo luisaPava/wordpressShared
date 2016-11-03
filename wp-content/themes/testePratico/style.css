@@ -3718,18 +3718,6 @@ a.post-thumbnail:hover {
 		width: 29.04761904%;
 	}
 
-	.site:before {
-		background-color: #000;
-		content: "";
-		display: block;
-		height: 100%;
-		min-height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 182px;
-		z-index: 2;
-	}
 
 	#secondary {
 		background-color: transparent;
@@ -4054,9 +4042,6 @@ a.post-thumbnail:hover {
 		margin-left: 222px;
 	}
 
-	.site:before {
-		width: 222px;
-	}
 
 	.search-box-wrapper,
 	.featured-content {
@@ -4319,4 +4304,43 @@ a.post-thumbnail:hover {
 		font-size: 25pt;
 		line-height: 36px;
 	}
+
+}
+
+.div-imagem {
+	/*background-color: blue;*/
+}
+
+.imagem-pessoa {
+	height: 300px;
+	margin: 20px;
+}
+
+.nome-desc {
+	/*width: 50%;
+	float:left;*/
+}
+
+.h2-nome {
+	text-align: left;
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+h3 {
+	text-align: center;
+	color: white;
+}
+
+.servicos {
+	width: 100%;
+	margin: 30px;
+	padding: inherit;
+}
+
+#Pessoa {
+	background-color: black;
 }
