@@ -39,7 +39,7 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="row">
-		  <div class="col-md-4"><h3>Home</h3></div>
+		  <a href="http://www.w3schools.com/TAgs/tag_a.asp"><div class="col-md-4"><h3>Home</h3></div></a>
 		  <div class="col-md-4"><h3>Faxina</h3></div>
 		  <div class="col-md-4"><h3>Elétrica</h3></div>
 		</div>

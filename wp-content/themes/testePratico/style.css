@@ -4326,7 +4326,7 @@ a.post-thumbnail:hover {
 	color: white;
 }
 
-p {
+p, h5 {
 	color: white;
 }
 
@@ -4343,4 +4343,9 @@ h3 {
 
 #Pessoa {
 	background-color: black;
+}
+
+form {
+	width: 80%;
+	padding: 20px;
 }

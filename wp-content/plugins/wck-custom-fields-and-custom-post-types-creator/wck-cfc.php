@@ -485,7 +485,8 @@ function wck_cfc_check_group_name_exists( $name ){
 		foreach( $meta_boxes as $meta_box ){
 			$wck_cfc_args = get_post_meta( $meta_box->ID, 'wck_cfc_args', true );
 			if( !empty( $wck_cfc_args ) ){
-				if( $wck_cfc_args[0]['meta-name'] == $name ){
+				/* make sure we compare them as slugs */
+				if( Wordpress_Creation_Kit::wck_generate_slug( $wck_cfc_args[0]['meta-name'] ) == Wordpress_Creation_Kit::wck_generate_slug( $name ) ){
 					return true;
 				}
 			}
@@ -508,7 +509,8 @@ function wck_cfc_check_field_slug_exists( $name ){
 			$wck_cfc_fields = get_post_meta( $meta_box->ID, 'wck_cfc_fields', true );
 			if( !empty( $wck_cfc_fields ) ){
 				foreach( $wck_cfc_fields as $wck_cfc_field ){
-					if( $wck_cfc_field['field-slug'] == $name ){
+					/* make sure to compare them as slugs */
+					if( Wordpress_Creation_Kit::wck_generate_slug( $wck_cfc_field['field-slug'] ) == Wordpress_Creation_Kit::wck_generate_slug( $name ) ){
 						return true;
 					}
 				}
@@ -977,7 +979,7 @@ function wck_number_field_error( $bool, $value, $id, $field, $meta, $fields ) {
 $wck_update_unserialized = get_option( 'wck_update_to_unserialized', 'yes' );
 if( $wck_update_unserialized == 'yes' ) {
 	new WCK_Add_Notices('wck_update_unserialized_notice',
-		sprintf(__('To update the meta information on posts to the new unserialized structure go to %1$sthis page%2$s and follow the instructions. %3$sDismiss%4$s', 'wck'), "<a href='" . admin_url('admin.php?page=wck-unserialized') . "'>", "</a>", "<a href='" . esc_url(add_query_arg('wck_update_unserialized_notice_dismiss_notification', '0')) . "'>", "</a>"),
+		sprintf(__('To update the meta information on posts to the new unserialized structure go to %1$sthis page%2$s and follow the instructions. Please make a backup of your database first! %3$sDismiss%4$s', 'wck'), "<a href='" . admin_url('admin.php?page=wck-unserialized') . "'>", "</a>", "<a href='" . esc_url(add_query_arg('wck_update_unserialized_notice_dismiss_notification', '0')) . "'>", "</a>"),
 		'update-nag');
 }
 
@@ -993,7 +995,7 @@ function wck_register_update_unserialized_submenu_page() {
 function wck_unserialized_page_callback(){
 
 	/* set number of posts that are processed in a batch !IMPORTANT IT IS ALSO SET IN THE wck_cfc_process_unserialized_batch() FUNCTION */
-	$per_batch = 100;
+	$per_batch = 30;
 	$step    = isset( $_GET['step'] )        			? absint( $_GET['step'] )   : 0;
 	$total   = isset( $_GET['total'] )       			? absint( $_GET['total'] )  : false;
 	$finish   = isset( $_GET['wckbatch-complete'] ) 	? esc_url( $_GET['wckbatch-complete'] )  : false;
@@ -1051,7 +1053,7 @@ function wck_cfc_process_unserialized_batch() {
 	}
 
 	/* set number of posts that are processed in a batch !IMPORTANT IT IS ALSO SET IN THE wck_unserialized_page_callback() FUNCTION */
-	$per_batch = 100;
+	$per_batch = 30;
 	$step  = isset( $_GET['step'] )  ? absint( $_GET['step'] )  : 0;
 	$total = isset( $_GET['total'] ) ? absint( $_GET['total'] ) : false;
 

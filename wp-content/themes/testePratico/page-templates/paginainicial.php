@@ -61,6 +61,10 @@ $image_object = get_cfc_field('infopaginainicial', 'imagem-de-fundo', $post->ID 
                   <p>
                     ajfnvasnoadncoasdncoasndcoansdcosandcpsnadpcnsdocnod
                   </p>
+                  <h5>Contato</h4>
+                  <p>
+                    email@exemplo.com    |    2343-8493
+                  </p>
                 </div>
               </div>
 
@@ -74,6 +78,26 @@ $image_object = get_cfc_field('infopaginainicial', 'imagem-de-fundo', $post->ID 
                   <li>Meia faxina</li>
                 </ul>
               </div>
+            </section>
+
+            <section>
+
+              <form class="formulario">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Nome</label>
+                  <input type="text" class="form-control" placeholder="Nome">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Pedido</label>
+                  <textarea class="form-control" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-default">Enviar</button>
+              </form>
+
             </section>
 
 
